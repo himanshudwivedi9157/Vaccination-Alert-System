@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vaccine Booth Alert System</title>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="./src/styles.css" />
+  <style>
+    span{
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 5px;
+    }
+    #customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+  text-align: center;
+}
+input {
+    padding: 4%;
+    margin-left: 20px;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+}
+button{
+    padding: 4%;
+    background-color: #04AA6D;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+}
+#app{
+    border: rebeccapurple;
+    background-color: #cadad4;
+}
+#start-vaccination-btn{
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+   margin: 5% 0% 5% 20%;
+}
+  </style>
+</head>
+<body>
+    <span>
+  <div id="app">
+    <h1>Vaccine Booth Alert System</h1>
+
+    <div>
+     <!-- <label for=""> Name:</label> <br> -->
+       <input type="text" id="name" placeholder=" ENTER YOUR FULL NAME"/><button id="register-btn">Register</button>
+    </div>
+
+    <div>
+      <button id="start-vaccination-btn">Start Vaccination</button>
+    </div>
+  </div>
+
+  <div class="main">
+    <h1>Registered People</h1>
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>Registered People</th>
+        </tr>
+      </thead>
+      <tbody id="registered-people">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="middle">
+    <h1>Vaccinated People</h1>
+    <table id="customers">
+      <thead>
+        <tr>
+          <th>Vaccinated People</th>
+        </tr>
+      </thead>
+      <tbody id="vaccinated-people">
+        <!-- Rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </div>
+    </span>
+  <script src="index.js"></script>
+</body>
+</html>
